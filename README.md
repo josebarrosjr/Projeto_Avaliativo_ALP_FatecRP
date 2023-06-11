@@ -1,3 +1,5 @@
+Fatec Ribeirão Preto.
+
 Projeto Avaliativo Semestral.
 Disciplina: Algorítimos e Lógia de Programação.
 Prof. Dr. Lucas Baggio Figueira.
