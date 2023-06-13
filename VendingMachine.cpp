@@ -22,7 +22,7 @@ float funcao_preco (float preco[]){
 
 }
 
-void funcao_estoque (std::string estoque[]){ 
+string funcao_estoque (std::string estoque[]){ 
 
 	estoque [0] = "Refrigerante de Cola";
 	estoque [1] = "Refrigerante de Guarana";
