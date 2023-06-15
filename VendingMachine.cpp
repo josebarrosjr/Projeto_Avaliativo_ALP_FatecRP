@@ -80,16 +80,13 @@ int main(int argc, char** argv) {
 	if (inicio == 'A'){
 		usuario:	
 	
-		cout << endl << "Bem vindo!" << endl; //.........................................................................................
+		cout << endl << "Bem vindo!" << endl; 
 		cout << endl << "Para iniciar seu pedido escolha um produto abaixo: " << endl;
 
 		std::string exibir_estoque[10];
     	funcao_estoque(exibir_estoque);
     	float preco[10];
 		funcao_preco(preco);
-		
-				//duas casas decimais
-				// << std::fixed << std::setprecision(2) << preco[i]
     	
     	for (int i = 0; i < 10; i++) {
         	std::cout << i+1 << " - "<< exibir_estoque[i] <<  " - R$ " << std::fixed << std::setprecision(2) << preco[i] << endl;
@@ -169,7 +166,7 @@ int main(int argc, char** argv) {
 		cout << "Insira sua senha de administrador.";
 		cin >> senha_adm;
 		
-		while (senha_adm != 2023){ //senha incorreta
+		while (senha_adm != 2023){ //enquanto senha incorreta
 			char opcao_senha;
 			cout << endl;
 			cout << "Senha incorreta." << endl;
@@ -188,14 +185,13 @@ int main(int argc, char** argv) {
 			}
 		}//while senha incorreta
 		
-		//admin INICIADO
+		//Modo admin INICIADO
 		char opcao_adm;
 		
 		modoAdm:
 		opcao_adm = modoAdmin(opcao_adm);
 		
-		if (opcao_adm == 'A'){
-			//funcao listar produtos + perguntar se deseja repor estoque
+		if (opcao_adm == 'A'){ //funcao listar produtos
             std::string exibir_estoque[10];
     		funcao_estoque(exibir_estoque);
     		
@@ -266,7 +262,7 @@ int main(int argc, char** argv) {
 				goto inicio;
 		} // if B alterar estoque
 		
-		if (opcao_adm == 'C'){
+		if (opcao_adm == 'C'){ // Lucro da maquina desde o inicio de sua operação
 			float preco[10];
 			funcao_preco(preco);
 			float lucro_atual = 0;		
@@ -293,7 +289,7 @@ int main(int argc, char** argv) {
 				goto inicio;		
 		}//if C lucro atual
 		
-		if (opcao_adm == 'D'){
+		if (opcao_adm == 'D'){ // lucro projetado (baseado no estoque atual da maquina)
 			float preco[10];
 			funcao_preco(preco);
 		 	float lucro_projetado = 0;
